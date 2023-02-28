@@ -5,21 +5,21 @@ public class Not_Dependency_Inversion_Principle {
 
             public class DebitCard{
         public void doTransaction(int amount){
-                System.out.println("tx done with DebitCard");
+                System.out.println("tx done with DebitCard"+amount);
             }
-        } 
+        }
             public class CreditCard{
             public void doTransaction(int amount){
-                System.out.println("tx done with CreditCard");
-            }}  
-           
+                System.out.println("tx done with CreditCard "+amount);
+            }}
+
             public class ShoppingMall {
             private DebitCard debitCard;
             public ShoppingMall(DebitCard debitCard) {
                     this.debitCard = debitCard;
                }
-            public void doPayment(Object order, int amount){
-                debitCard.doTransaction(amount); 
+            public void doPaymentByDebitCard( int amount){
+                debitCard.doTransaction(amount);
              }
            
             }
@@ -35,13 +35,13 @@ ShoppingMall is tightly couple with Debit Card
                 Not_Dependency_Inversion_Principle outerObject = 
                 new Not_Dependency_Inversion_Principle();
 
-                Not_Dependency_Inversion_Principle.DebitCard innerObject = 
+                Not_Dependency_Inversion_Principle.DebitCard debitCardObj =
                 outerObject.new DebitCard();
 
-                Not_Dependency_Inversion_Principle.ShoppingMall innerObject2 = 
-                outerObject.new ShoppingMall(innerObject);
+                Not_Dependency_Inversion_Principle.ShoppingMall shoppingMallObj =
+                outerObject.new ShoppingMall(debitCardObj);
 
-                innerObject2.doPayment("some order",5000);
+                shoppingMallObj.doPaymentByDebitCard(5000);
                
 }
 }
