@@ -1,4 +1,4 @@
-package Aggregation_Composition;
+package Aggregation_And_Composition;
 
 public class Example_Aggregation_Composition {
     

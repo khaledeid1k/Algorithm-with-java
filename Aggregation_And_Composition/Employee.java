@@ -1,4 +1,4 @@
-package Aggregation_Composition;
+package Aggregation_And_Composition;
 
 public class Employee {
     int id;

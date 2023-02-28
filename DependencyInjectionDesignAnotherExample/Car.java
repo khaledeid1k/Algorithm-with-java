@@ -1,4 +1,4 @@
-package Dependency_Injection_Design_Another_Example;
+package DependencyInjectionDesignAnotherExample;
 
 public interface Car {
     int getSpeed();

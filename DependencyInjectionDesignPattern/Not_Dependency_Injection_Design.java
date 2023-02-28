@@ -1,4 +1,4 @@
-package Dependency_Injection_Design_Pattern;
+package DependencyInjectionDesignPattern;
 
 public class Not_Dependency_Injection_Design {
     

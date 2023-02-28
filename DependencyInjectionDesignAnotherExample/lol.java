@@ -1,4 +1,4 @@
-package Dependency_Injection_Design_Another_Example;
+package DependencyInjectionDesignAnotherExample;
 //https://mohamedisoliman.github.io/dependency-injection/
 public class lol{
   public static void main(String[] args) {
